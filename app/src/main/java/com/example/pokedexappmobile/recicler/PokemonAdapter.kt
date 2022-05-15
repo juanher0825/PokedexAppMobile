@@ -11,6 +11,9 @@ import com.example.pokedexappmobile.model.Pokemon
 import kotlinx.coroutines.*
 import java.io.IOException
 import java.net.URL
+import java.text.SimpleDateFormat
+import java.util.*
+import kotlin.collections.ArrayList
 
 class PokemonAdapter: RecyclerView.Adapter<PokemonView>() {
 
@@ -41,9 +44,19 @@ class PokemonAdapter: RecyclerView.Adapter<PokemonView>() {
 
         holder.context = activityContext
 
+
+
         this.bitmapGenerator(pokemon.imgUrl, holder)
 
-        holder.pokemonName.text = pokemon.name
+        val dateLong = pokemon.date.toLong()
+        val date = Date(dateLong)
+        val format = SimpleDateFormat("yyyy.MM.dd HH:mm")
+        val datePo = format.format(date)
+
+
+
+
+        holder.pokemonName.text = pokemon.name + " " + datePo
     }
 
     override fun getItemCount(): Int {

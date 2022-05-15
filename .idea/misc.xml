@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Users/pauli/AndroidStudioProjects/PokedexAppMobile/app/src/main/res/layout/activity_home.xml" value="0.1" />
         <entry key="..\:/Users/pauli/AndroidStudioProjects/PokedexAppMobile/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
+        <entry key="..\:/Users/pauli/AndroidStudioProjects/PokedexAppMobile/app/src/main/res/layout/activity_pokedex.xml" value="0.1" />
+        <entry key="..\:/Users/pauli/AndroidStudioProjects/PokedexAppMobile/app/src/main/res/layout/activity_pokemon.xml" value="0.22" />
         <entry key="..\:/Users/pauli/AndroidStudioProjects/PokedexAppMobile/app/src/main/res/layout/pokemon_row.xml" value="0.3333333333333333" />
       </map>
     </option>
