@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.pokedexappmobile">
+
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -14,9 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.PokedexAppMobile"
         tools:targetApi="31">
-
-
-
+        <activity
+            android:name=".activities.PokedexActivity"
+            android:exported="true" />
         <activity
             android:name=".activities.HomeActivity"
             android:exported="true" />

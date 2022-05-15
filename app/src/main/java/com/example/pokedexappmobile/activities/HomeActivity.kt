@@ -49,10 +49,10 @@ class HomeActivity : AppCompatActivity() {
             }
         }
 
-        //val intent = Intent(this, PokedexActivity::class.java).apply {
-            //putExtra("username", user.name)
-        //}
-        //startActivity(intent)
+        val intent = Intent(this, PokedexActivity::class.java).apply {
+            putExtra("username", user.name)
+        }
+        startActivity(intent)
         finish()
     }
 }
