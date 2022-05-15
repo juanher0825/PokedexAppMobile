@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pokedexappmobile.R
 import com.example.pokedexappmobile.databinding.ActivityPokedexBinding
 import com.example.pokedexappmobile.model.Pokemon
+import com.example.pokedexappmobile.recicler.PokemonAdapter
 import com.example.pokedexappmobile.util.Constants
 import com.example.pokedexappmobile.util.HTTPSWebUtil
 import com.google.firebase.firestore.Query
@@ -28,7 +29,7 @@ class PokedexActivity : AppCompatActivity() {
     private val binding get() = _binding!!
 
     private lateinit var  layoutManager: LinearLayoutManager
-    //-private lateinit var adapter: PokemonAdapter
+    private lateinit var adapter: PokemonAdapter
 
     private var username : String? = null
 
@@ -44,9 +45,9 @@ class PokedexActivity : AppCompatActivity() {
         layoutManager = LinearLayoutManager(this)
         binding.pokemonRecycler.layoutManager = layoutManager
 
-        //-adapter = PokemonAdapter()
-        //-adapter.activityContext = this
-        //-binding.pokemonRecycler.adapter = adapter
+        adapter = PokemonAdapter()
+        adapter.activityContext = this
+        binding.pokemonRecycler.adapter = adapter
 
 
         binding.catchBttn.setOnClickListener{
@@ -83,7 +84,7 @@ class PokedexActivity : AppCompatActivity() {
                     }
                 }
 
-                //-adapter.setPokemons(pokemons)
+                adapter.setPokemons(pokemons)
 
             }else{
                 this.loadPokemons()
@@ -184,7 +185,7 @@ class PokedexActivity : AppCompatActivity() {
 
         lifecycleScope.launch(Dispatchers.IO){
             withContext(Dispatchers.Main){
-                //-adapter.setPokemons(ArrayList<Pokemon>())
+                adapter.setPokemons(ArrayList<Pokemon>())
             }
         }
 
@@ -198,7 +199,7 @@ class PokedexActivity : AppCompatActivity() {
 
                     lifecycleScope.launch(Dispatchers.IO){
                         withContext(Dispatchers.Main){
-                            //-adapter.addPokemon(poke)
+                            adapter.addPokemon(poke)
                         }
                     }
 
